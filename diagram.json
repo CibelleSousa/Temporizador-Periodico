@@ -1,0 +1,62 @@
+{
+    "version": 1,
+    "author": "Cibelle Sousa Rodrigues",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "wokwi-pi-pico",
+        "id": "pico",
+        "top": 67.9,
+        "left": 142.05,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      { "type": "wokwi-led", "id": "led1", "top": 150, "left": -53.8, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": 207.6,
+        "left": -53.8,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": 265.2,
+        "left": -53.8,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 186.35,
+        "left": 0,
+        "attrs": { "value": "300" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 243.95,
+        "left": 0,
+        "attrs": { "value": "300" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 301.55,
+        "left": 0,
+        "attrs": { "value": "300" }
+      }
+    ],
+    "connections": [
+      [ "pico:GND.2", "led1:C", "black", [ "h-224.85", "v44.15" ] ],
+      [ "led2:C", "pico:GND.2", "black", [ "v0", "h-38", "v-96" ] ],
+      [ "led3:C", "pico:GND.2", "black", [ "v0", "h-38", "v-153.6" ] ],
+      [ "led1:A", "r1:1", "green", [ "v0" ] ],
+      [ "led2:A", "r2:1", "green", [ "v0" ] ],
+      [ "led3:A", "r3:1", "green", [ "v0" ] ],
+      [ "pico:GP13", "r1:2", "red", [ "h-23.25", "v-42.25" ] ],
+      [ "pico:GP11", "r3:2", "green", [ "h-13.65", "v92.15" ] ],
+      [ "r2:2", "pico:GP12", "gold", [ "h75.6", "v-24.95" ] ]
+    ],
+    "dependencies": {}
+  }
