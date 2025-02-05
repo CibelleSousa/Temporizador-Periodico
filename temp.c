@@ -5,7 +5,7 @@
 
 // Variáveis Globais
 static uint8_t contador = 0;
-int pinos[3] = {13, 12, 11};
+const uint8_t pinos[3] = {13, 12, 11};
 
 // Declaração das funções
 void setup();
